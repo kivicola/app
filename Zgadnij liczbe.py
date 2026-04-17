@@ -18,7 +18,7 @@ while True:
         time.sleep(.2)
         start_gry = input('''
         Użyj poprawnej komendy.
-        (tak / nie / start / quit / zasady)
+        (tak / start / quit / zasady)
         > ''')
         
 
@@ -28,20 +28,20 @@ while True:
         Możesz rozegrać od 1 do 1000000 rund
               
         Celem gry jest odgadnięcie liczby w różnych przedziałach:
-        Łatwy 0-10
+        Łatwy 0-25
         Średni 0-100
         Trudny 0-1000
         Custom (dowolny przedział)
 
         Dostępne są 3 poziomy trudności.
         Łatwy z nieograniczoną liczbą prób.
-        Średni z 10 próbami.
-        Trudny z 20 próbami
+        Średni z 20 próbami
+        Trudny z 10 próbami
         Custom (dowolna ilość prób)
         ''')
         continue
 
-    if start_gry in ('nie', 'quit'):
+    if start_gry in 'quit':
         time.sleep(.2)
         print('''
         Do zobaczenia :)
@@ -74,14 +74,14 @@ while True:
     liczby = input('''
           
         Wybierz przedział liczb:
-        1. Łatwy 0-10
+        1. Łatwy 0-25
         2. Średni 0-100
         3. Trudny 0-1000
         4. Custom
         >  ''').strip().lower()
     
     if liczby in ('1', 'łatwy'):
-        min_liczba, max_liczba = 0, 10
+        min_liczba, max_liczba = 0, 25
         break
     elif liczby in ('2', 'średni'):
         min_liczba, max_liczba = 0, 100
@@ -132,8 +132,8 @@ while True:
     poziom = input('''
         Wybierz poziom trudności:
         1. Łatwy Nieograniczona ilośc zgadnięć
-        2. Średni 10
-        3. Trudny 20
+        2. Średni 20
+        3. Trudny 10
         4. Custom (dowolna ilość zgadnięć)
         >  ''').strip().lower()
 
@@ -141,10 +141,10 @@ while True:
         trudność = 1000000000
         break
     elif poziom in ('2', 'średni'):
-        trudność = 10
+        trudność = 20
         break
     elif poziom in ('3', 'trudny'):
-        trudność = 20
+        trudność = 10
         break
     elif poziom in ('4', 'custom'):
     
