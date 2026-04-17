@@ -14,7 +14,7 @@ while True:
     start_gry = input('''
         Wiesz jak grać (tak) czy chcesz poznać zasady gry? (zasady) 
         > ''').strip().lower()
-    while start_gry not in ('tak', 'zasady', 'start', 'nie', 'quit'):
+    while start_gry not in ('tak', 'zasady', 'start', 'quit'):
         time.sleep(.2)
         start_gry = input('''
         Użyj poprawnej komendy.
@@ -188,7 +188,7 @@ for runda in range(1, rundy + 1):
             zgadnięcia += 1
             szansa -= 1
             if szansa > 1000000:
-                tekst_szans = "Pozostałych sznas ∞"
+                tekst_szans = "Pozostałych szans ∞"
             elif szansa > 20:
                 tekst_szans = "Pozostałych szans > 20"
             else:
@@ -197,13 +197,13 @@ for runda in range(1, rundy + 1):
             if zgadywana_liczba < liczba:
                 time.sleep(.2)       
                 print(f'''
-        Odgadywana liczba jest większa {zgadywana_liczba} < #
+        Odgadywana liczba jest większa: {zgadywana_liczba} < #
         {tekst_szans}''')
                 
             elif zgadywana_liczba > liczba:
                 time.sleep(.2)
                 print(f'''
-        Odgadywana liczba jest mniejsza {zgadywana_liczba} > #
+        Odgadywana liczba jest mniejsza: {zgadywana_liczba} > #
         {tekst_szans}''')
                 
             else:
