@@ -1,7 +1,7 @@
 #Black Jack
 import os
 os.system('cls')  # Windows
- faihgiuaga
+#faihgiuaga
 import random
 import time
 
