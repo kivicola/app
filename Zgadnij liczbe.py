@@ -1,7 +1,7 @@
 #Guess the number
 import os
 os.system('cls')  # Windows
- 
+
 import random
 import time
 
